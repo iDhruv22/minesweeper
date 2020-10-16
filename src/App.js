@@ -1,25 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Minesweeper from "./components/Minesweeper";
+import Title from "./components/Title";
+import AppWrapperStyled from "./styled-components/AppWrapperStyled";
+import GameWrapperStyled from "./styled-components/GameWrapperStyled";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapperStyled>
+      <GameWrapperStyled>
+        <Title />
+        <Minesweeper />
+      </GameWrapperStyled>
+    </AppWrapperStyled>
   );
 }
 
